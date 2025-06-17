@@ -1,3 +1,15 @@
-<div class="container">
+<!-- 1) mostra il loader finché non ho gli eventi -->
+<ng-container *ngIf="isLoading; else showEvents">
+  <app-loader></app-loader>
+</ng-container>
 
-</div>
+<!-- 2) quando isLoading=false mostro la lista -->
+<ng-template #showEvents>
+  <mat-toolbar color="accent">Elenco Eventi</mat-toolbar>
+  <div class="events-container">
+    <app-event
+      *ngFor="let ev of events"
+      [event]="ev">
+    </app-event>
+  </div>
+</ng-template>

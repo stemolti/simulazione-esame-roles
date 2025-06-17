@@ -1,5 +1,8 @@
 @if(isLoading) {
 <app-loader></app-loader>
 }
+<!-- Sidebar solo se ho un utente -->
+<app-sidebar *ngIf="currentUser$ | async as user" [user]="user" (logout)="logout()"></app-sidebar>
 
+<!-- Qui dentro si caricano tutte le pagine, incluso Home -->
 <router-outlet></router-outlet>

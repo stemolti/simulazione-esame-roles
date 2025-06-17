@@ -14,7 +14,6 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AuthInterceptor } from './utils/auth.interceptor';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -25,15 +24,20 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { EventComponent } from './components/event/event.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { LoaderComponent } from './components/loader/loader.component';
-
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    LoaderComponent
+    EventComponent,
+    SidebarComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
+    MatToolbarModule,
     MatProgressSpinnerModule,
     FormsModule,
     MatDialogModule,
@@ -55,6 +60,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatChipsModule,
+    MatProgressSpinnerModule,
     MatTableModule,
     MatPaginatorModule,
   ],
