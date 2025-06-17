@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { User as iUser } from './user.entity';
+import { User as IUser } from './user.entity';
 
-export const userSchema = new mongoose.Schema<iUser>({
+export const userSchema = new mongoose.Schema<IUser>({
   firstName: String,
   lastName: String,
   username: String,
@@ -33,4 +33,4 @@ userSchema.set('toObject', {
   },
 });
 
-export const UserModel = mongoose.model<iUser>('User', userSchema);
+export const UserModel = mongoose.model<IUser>('User', userSchema);

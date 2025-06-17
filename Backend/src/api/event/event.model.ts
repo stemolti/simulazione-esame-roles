@@ -1,4 +1,3 @@
-// models/event.entity.ts
 import mongoose from 'mongoose';
 import { Event as IEvent } from './event.entity';
 
