@@ -4,6 +4,6 @@ export interface User {
   lastName: string;
   picture?: string;
   username: string;
-  role: 'dipendente' | 'responsabile';
+  role: 'employee' | 'organizer';
   isConfirmed: boolean;
 }
